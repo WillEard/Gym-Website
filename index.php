@@ -52,9 +52,9 @@
         <h1 class="display-5 fw-bold">Little to apply, a lot to gain.</h1>
         <div class="col-lg-6 mx-auto">
         <p class="lead mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas minus voluptates, non est aperiam vitae repudiandae, voluptatem eveniet molestias ratione repellendus modi atque, sapiente dolor consectetur explicabo nobis dignissimos dolore.</p>
-        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Join Today</button>
-        </div>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                <button type="button" class="btn btn-info btn-lg px-4 gap-3">Join Today</button>
+            </div>
         </div>
     </div>
 
