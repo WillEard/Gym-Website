@@ -1,5 +1,10 @@
+*{
+    --background: #f9f9f9 !important;
+}
+
 body{
     overflow-x: hidden;
+    background-color: var(--background) !important;
 }
 
 .bg-img{
