@@ -13,10 +13,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
         <!--Custom Styling-->
-        <link rel="stylesheet" href="styles/index-style.css">
+        <link rel="stylesheet" href="styles/navbar-style.css">
     </head>
     <body>
 
+    <!--Navbar-->
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark py-3 sticky-top">
             <div class="container-fluid">
@@ -28,7 +29,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link text-light fw-bold" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link text-light" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-light" href="index.php#gym-groups">Gym Groups</a>
@@ -37,47 +38,48 @@
                             <a class="nav-link text-light" href="index.php#pricing">Pricing</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" href="sign-up-in.php">Sign Up</a>
+                            <a class="nav-link text-light fw-bold" href="sign-up-in.php">Sign In</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
-
     <img class="bg-img " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
 
+    <!--Sign In-->
     <div id="sign-in" class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-light text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Sign in.</h1>
-                <p class="col-lg-10 fs-4">To start your journey.</p>
+                <p class="col-lg-10 fs-4">To carry on your journey.</p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email / Username</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="checkbox mb-3">
-                    <label>
-                    <input type="checkbox" value="remember-me"> Remember me
-                    </label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
-                <hr class="my-4">
-                <div class="text-center">
-                    <button id="sign-up-button" class="btn btn-secondary btn-md">Or sign up first.</button>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input name="email-username-SI" type="text" class="form-control" id="floatingUsername-SI" placeholder="name@example.com">
+                        <label for="floatingUsername-SI">Email / Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="password-SI" type="password" class="form-control" id="floatingPassword-SI" placeholder="Password">
+                        <label for="floatingPassword-SI">Password</label>
+                    </div>
+                    <div class="checkbox mb-3">
+                        <label>
+                        <input type="checkbox" value="remember-me"> Remember me
+                        </label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign In</button>
+                    <hr class="my-4">
+                    <div class="text-center">
+                        <button id="sign-up-button" class="btn btn-secondary btn-md">Or sign up first.</button>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 
+    <!--Sign Up-->
     <div id="sign-up" class="container col-xl-10 col-xxl-8 px-4 py-5">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-light text-lg-start">
@@ -86,23 +88,23 @@
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light">
-                <div class="form-floating mb-3">
-                    <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                    <label for="floatingInput">Email / Username</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Password</label>
-                </div>
-                <div class="form-floating mb-3">
-                    <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                    <label for="floatingPassword">Confirm Password</label>
-                </div>
-                <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
-                <hr class="my-4">
-                <div class="text-center">
-                    <button id="sign-in-button" class="btn btn-secondary btn-md">Or sign in here.</button>
-                </div>
+                    <div class="form-floating mb-3">
+                        <input name="email-username-SU" type="text" class="form-control" id="floatingUsername-SU" placeholder="name@example.com">
+                        <label for="floatingUsername-SU">Email / Username</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="password-SU" type="password-SU" class="form-control" id="floatingPassword-SU" placeholder="Password">
+                        <label for="floatingPassword-SU">Password</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="passwordConfirm-SU" type="password" class="form-control" id="floatingPasswordConfirm-SU" placeholder="Password">
+                        <label for="floatingPasswordConfirm-SU">Confirm Password</label>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">Sign up</button>
+                    <hr class="my-4">
+                    <div class="text-center">
+                        <button id="sign-in-button" class="btn btn-secondary btn-md">Or sign in here.</button>
+                    </div>
                 </form>
             </div>
         </div>
