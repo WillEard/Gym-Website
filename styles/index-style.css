@@ -1,0 +1,13 @@
+/* Index scrolling div fade in */
+
+.container .fade-in-up-on-scroll
+{ 
+    margin:50px; 
+    padding:50px; 
+    background-color:pink; 
+}
+
+.fade-in-up-on-scroll
+{
+    opacity:0;
+}
