@@ -17,3 +17,8 @@ body{
     left: 0;
     z-index: -1;
 }
+
+.navbar-scrolled {
+    background-color: black !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+}

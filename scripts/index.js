@@ -1,4 +1,6 @@
 // JavaScript
+
+
 $(function(){  // $(document).ready shorthand
   $('.hero').fadeIn('slow');
 });

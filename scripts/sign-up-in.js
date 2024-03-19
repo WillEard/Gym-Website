@@ -1,8 +1,11 @@
 
 // HIDE Sign-In form && SHOW Sign-Up form
 
+
+
 $(document).ready(function(){
-    //$( "#sign-up" ).hide();
+    
+    $( "#sign-up" ).hide();
 
     $("#sign-up-button").click(function(){
         $("#sign-in").hide()
