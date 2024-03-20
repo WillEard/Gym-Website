@@ -1,4 +1,6 @@
-
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,14 +14,6 @@
     <link rel="stylesheet" href="styles/navbar-style.css">
 </head>
 <body>
-
-  <style>
-    .navbar-scrolled {
-    background-color:  !important;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
-    }
-
-  </style>
     
     <img class="bg-img " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
 
