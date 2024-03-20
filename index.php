@@ -1,6 +1,3 @@
-<?php
-
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -13,9 +10,16 @@
 
     <!--Custom Styling-->
     <link rel="stylesheet" href="styles/navbar-style.css">
-    <link rel="stylesheet" href="styles/index-style.css">
 </head>
 <body>
+
+  <style>
+    .navbar-scrolled {
+    background-color:  !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15) !important;
+    }
+
+  </style>
     
     <img class="bg-img " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
 
@@ -60,8 +64,35 @@
         </div>
     </div>
 
+    <!--Login-->
+    <div class="container-fluid bg-info col-xl-10 col-xxl-8 px-5 py-5">
+      <div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">Get back to it.</h1>
+          <p class="col-lg-10 fs-4">Catch where you left off.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5">
+          <form class="p-4 p-md-5 border rounded-3 bg-light">
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+              <label for="floatingInput">Email address</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+              <label for="floatingPassword">Password</label>
+            </div>
+            
+            <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+            <hr class="my-4">
+            <small class="text-muted">Or click <a href="#">here</a> to sign uo.</small>
+            </form>
+        </div>
+      </div>
+    </div>
+
+
     <!--Explore Jumbo-->
-    <div class="container my-5 py-5 fade-in-up-on-scroll"></div>
+    <div class="container my-5 fade-in-up-on-scroll"></div>
       <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6 mx-auto">
@@ -78,11 +109,11 @@
     </div>
 
     <!--Gym Locations-->
-    <div id="gym-groups" class="container bg-info rounded fade-in-up-on-scroll">
-      <div class="container px-4 py-5 text-center" id="custom-cards">
+    <div id="gym-groups" class="container bg-info rounded fade-in-up-on-scroll justify-content-center">
+      <div class="container px-4 py-5 text-center mx-auto" id="custom-cards">
         <h2 class="pb-2 text-light">Gym Locations</h2>
 
-          <div class="row justify-content-center row-cols-sm-4 mx-auto g-4 py-5 mx-auto">
+          <div class="row justify-content-center row-cols-sm-4 mx-auto text-center justify-content-center g-4 py-5 mx-auto">
             <div class="col">
               <div class="card" style="width: 18rem;">
                 <img src="https://images.unsplash.com/photo-1561214078-f3247647fc5e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
