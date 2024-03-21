@@ -1,7 +1,9 @@
 <?php
 
+    // CLASS ErrorHandler - handles sign up error handling for data
     class ErrorHandler
     {
+        // CONSTRUCTOR
         public function __construct($uname, $email, $password, $confirmPassword)
         {
             $this->uname = $uname;
@@ -10,6 +12,8 @@
             $this->confirmPassword = $confirmPassword;
         }
 
+        /* CALL BACK FUNCTIONS FOR ERROR HANDLING */
+        
         public function EmptyInput()
         {
             if (empty($this->uname) || empty($this->email) || empty($this->password) || empty($this->confirmPassword))
@@ -70,6 +74,6 @@
             }
         }
 
-        
+
     }
 ?>

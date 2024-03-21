@@ -1,5 +1,6 @@
 <?php
 
+    // CLASS SignUp - inherits from DBClass
     class SignUp extends DBClass
     {
         // CHECK user if already exists
