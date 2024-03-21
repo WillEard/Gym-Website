@@ -13,11 +13,11 @@
         <!--Custom Styling-->
         <link rel="stylesheet" href="styles/navbar-style.css">
     </head>
-    <body>
+    <body style="overflow: hidden;">
 
     <!--Navbar-->
     <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-dark py-3 sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark py-3">
             <div class="container-fluid">
                 <svg width="30" height="24" class="d-inline-block align-text-top mx-1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFFFFF" d="M96 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32V224v64V448c0 17.7-14.3 32-32 32H128c-17.7 0-32-14.3-32-32V384H64c-17.7 0-32-14.3-32-32V288c-17.7 0-32-14.3-32-32s14.3-32 32-32V160c0-17.7 14.3-32 32-32H96V64zm448 0v64h32c17.7 0 32 14.3 32 32v64c17.7 0 32 14.3 32 32s-14.3 32-32 32v64c0 17.7-14.3 32-32 32H544v64c0 17.7-14.3 32-32 32H480c-17.7 0-32-14.3-32-32V288 224 64c0-17.7 14.3-32 32-32h32c17.7 0 32 14.3 32 32zM416 224v64H224V224H416z"/></svg>
                 <a class="navbar-brand fw-bold" href="index.php">The Gym</a> 
@@ -46,7 +46,7 @@
     <img class="bg-img " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
 
     <!--Sign In-->
-    <div id="sign-in" class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div id="sign-in" class="container col-xl-10 col-xxl-8 px-4 py-3">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-light text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Sign in.</h1>
@@ -78,7 +78,7 @@
     </div>
 
     <!--Sign Up-->
-    <div id="sign-up" class="container col-xl-10 col-xxl-8 px-4 py-5">
+    <div id="sign-up" class="container col-xl-10 col-xxl-8 px-4 py-3">
         <div class="row align-items-center g-lg-5 py-5">
             <div class="col-lg-7 text-center text-light text-lg-start">
                 <h1 class="display-4 fw-bold lh-1 mb-3">Sign up.</h1>
@@ -87,8 +87,12 @@
             <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light">
                     <div class="form-floating mb-3">
-                        <input name="email-username-SU" type="text" class="form-control" id="floatingUsername-SU" placeholder="name@example.com">
-                        <label for="floatingUsername-SU">Email / Username</label>
+                        <input name="email-SU" type="email" class="form-control" id="floatingEmail-SU" placeholder="name@example.com">
+                        <label for="floatingEmail-SU">Email</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input name="username-SU" type="text" class="form-control" id="floatingUsername-SU" placeholder="name@example.com">
+                        <label for="floatingUsername-SU">Username</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input name="password-SU" type="password-SU" class="form-control" id="floatingPassword-SU" placeholder="Password">
