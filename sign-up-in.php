@@ -43,7 +43,40 @@
             </div>
         </nav>
     </div>
+    
     <img class="bg-img " src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
+
+    <div class="container col-xl-10 col-xxl-8 px-5 py-2">
+        <?php
+            if (isset($_GET["error"]))
+            {
+                if ($_GET["error"] == "emptyinput(s)")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Empty Fields</div>";
+                }
+
+                if ($_GET["error"] == "invalidusername")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Invalid Username!</div>";
+                }
+
+                if ($_GET["error"] == "invalidemail")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Invalid Email!</div>";
+                }
+
+                if ($_GET["error"] == "incorrectpass")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Passwords do not match!s</div>";
+                }
+
+                if ($_GET["error"] == "usernameoremailtaken")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Username or Email already in use!</div>";
+                }
+            }
+        ?>
+    </div>
 
     <!--Sign In-->
     <div id="sign-in" class="container col-xl-10 col-xxl-8 px-4 py-3">
@@ -85,7 +118,7 @@
                 <p class="col-lg-10 fs-4">To start your journey.</p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
-                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                <form class="p-4 p-md-5 border rounded-3 bg-light" action="form-data-handling/signup.inc.php" method="POST" novalidate>
                     <div class="form-floating mb-3">
                         <input name="email-SU" type="email" class="form-control" id="floatingEmail-SU" placeholder="name@example.com">
                         <label for="floatingEmail-SU">Email</label>

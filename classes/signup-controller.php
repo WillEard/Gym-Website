@@ -21,7 +21,7 @@
             $this->confirmPassword = $confirmPassword;
 
             // INSTANTIATE ERROR HANDLER OBJECT
-            $errorHandler = new ErrorHandler($uname, $email, $password, $confirmPassword);
+            //$errorHandler = new ErrorHandler($uname, $email, $password, $confirmPassword);
         }
 
         // CALL error handler methods from the ErrorHandler class.
