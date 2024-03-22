@@ -88,7 +88,7 @@
             <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light">
                     <div class="form-floating mb-3">
-                        <input name="email-username-SI" type="text" class="form-control" id="floatingUsername-SI" placeholder="name@example.com">
+                        <input name="username-SI" type="text" class="form-control" id="floatingUsername-SI" placeholder="name@example.com">
                         <label for="floatingUsername-SI">Email / Username</label>
                     </div>
                     <div class="form-floating mb-3">
