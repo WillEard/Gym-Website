@@ -50,6 +50,7 @@
         <?php
             if (isset($_GET["error"]))
             {
+                // SIGN UP
                 if ($_GET["error"] == "emptyinput(s)")
                 {
                     echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Empty Fields!</div>";
@@ -74,6 +75,17 @@
                 {
                     echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Username or Email already in use!</div>";
                 }
+
+                // SIGN IN
+                if ($_GET["error"] == "usernotfound")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: User does not exist!</div>";
+                }
+
+                if ($_GET["error"] == "stmtfailed")
+                {
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Internal error!</div>";
+                }
             }
         ?>
     </div>
@@ -86,10 +98,10 @@
                 <p class="col-lg-10 fs-4">To carry on your journey.</p>
             </div>
             <div class="col-md-10 mx-auto col-lg-5">
-                <form class="p-4 p-md-5 border rounded-3 bg-light">
+                <form class="p-4 p-md-5 border rounded-3 bg-light" action="form-data-handling/signin.inc.php" method="POST" novalidate>
                     <div class="form-floating mb-3">
                         <input name="username-SI" type="text" class="form-control" id="floatingUsername-SI" placeholder="name@example.com">
-                        <label for="floatingUsername-SI">Email / Username</label>
+                        <label for="floatingUsername-SI">Username</label>
                     </div>
                     <div class="form-floating mb-3">
                         <input name="password-SI" type="password" class="form-control" id="floatingPassword-SI" placeholder="Password">

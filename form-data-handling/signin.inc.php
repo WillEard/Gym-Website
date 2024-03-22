@@ -12,7 +12,7 @@
         include "../classes/db-connect.php";
         include "../classes/signin-class.php";
         include "../classes/signin-controller.php";
-        $signup = new SignInController($uname, $password);
+        $signin = new SignInController($uname, $pass);
 
         $signin->SignInUser();
 

@@ -37,14 +37,24 @@
                         <li class="nav-item">
                             <a class="nav-link text-light" href="#pricing">Pricing</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" href="sign-up-in.php">Sign In</a>
-                        </li>
+                        <?php
+                          if (isset($_SESSION["username"]))
+                          {
+                            echo '<li class="nav-item"> <a class="nav-link text-light" href="form-data-handling/signout.inc.php">Sign Out</a> </li>';
+                          }
+                          else
+                          {
+                            echo '<li class="nav-item"> <a class="nav-link text-light" href="sign-up-in.php">Sign In</a> </li>';
+                          }
+                        ?>
+                        
                     </ul>
                 </div>
             </div>
         </nav>
     </div>
+
+    
     
     <!--Hero-->
     <div class="container px-4 py-5 my-5 text-center text-light hero">

@@ -6,17 +6,17 @@
         {
             $stmt = $this->Connect()->prepare('SELECT pass FROM users WHERE username = ?;');
 
-            if (!$stmt->execute(array($uname, $pass)))
+            if (!$stmt->execute(array($uname)))
             {
                 $stmt = null;
-                header("location: ../index.php?error=stmtfailed");
+                header("location: ../sign-up-in.php?error=stmtfailed");
                 exit();
             }
 
             if ($stmt->rowCount() == 0)
             {
                 $stmt = null;
-                header("location: ../index.php?error=usernotfound");
+                header("location: ../sign-up-in.php?error=usernotfound");
                 exit();
             }
 
@@ -26,24 +26,24 @@
             if (!$checkPass)
             {
                 $stmt = null;
-                header("location: ../index.php?error=incorrectpassword");
+                header("location: ../sign-up-in.php?error=incorrectpass");
                 exit();
             }
             else if ($checkPass)
             {
-                $stmt = $this->Connect()->prepare('SELECT * FROM users WHERE username = ? OR Email = ? AND pass = ?;');
+                $stmt = $this->Connect()->prepare('SELECT username FROM users WHERE username = ?;');
 
-                if (!$stmt->execute(array($uname, $email, $pass)))
+                if (!$stmt->execute(array($uname)))
                 {
                     $stmt = null;
-                    header("location: ../index.php?error=stmtfailed");
+                    header("location: ../sign-up-in.php?error=stmtfailed");
                     exit();
                 }
 
                 if ($stmt->rowCount() == 0)
                 {
                     $stmt = null;
-                    header("location: ../index.php?error=usernotfound");
+                    header("location: ../sign-up-in.php?error=usernotfound");
                     exit();
                 }
 

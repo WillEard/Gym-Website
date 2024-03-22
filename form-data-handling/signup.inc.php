@@ -20,7 +20,7 @@
 
         $signup->SignUpUser();
 
-        $userId = $signup->FetchUserID($uname);
+        //$userId = $signup->FetchUserID($uname);
 
         header("location: ../sign-up-in.php?error=none");
     }

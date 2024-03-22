@@ -45,7 +45,8 @@
             $stmt = null;
         }
 
-        // GET userID
+        // GET userID FOR PROFILE
+        /*
         protected function GetUserID($uname)
         {
             $stmt = $this->Connect()->prepare('SELECT userID FROM users WHERE username = ?;');
@@ -60,13 +61,10 @@
             if (!$stmt->rowCount() == 0)
             {
                 $stmt = null;
-                header("location: ../index.php?error=profileNotFound");
+                header("location: ../index.php?error=useralreadyexists");
                 exit();
             }
-
-            $profileData = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-            return $profileData;
         }
+        */
     }
 ?>
