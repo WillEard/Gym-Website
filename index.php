@@ -40,7 +40,18 @@
                         <?php
                           if (isset($_SESSION["username"]))
                           {
-                            echo '<li class="nav-item"> <a class="nav-link text-light" href="form-data-handling/signout.inc.php">Sign Out</a> </li>';
+                            echo '<div class="btn-group">
+                            <button type="button" class="btn btn-info">'. $_SESSION["username"]. '</button>
+                            <button type="button" class="btn btn-info dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                              <span class="visually-hidden">Toggle Dropdown</span>
+                            </button>
+                            <ul class="dropdown-menu">
+                              <li><a class="dropdown-item" href="#">Book a session</a></li>
+                              <li><a class="dropdown-item" href="#">Gym Plan</a></li>
+                              <li><hr class="dropdown-divider"></li>
+                              <li class="nav-item"> <a class="dropdown-item text-dark" href="form-data-handling/signout.inc.php">Sign Out</a> </li>
+                              </ul>
+                          </div>';
                           }
                           else
                           {
@@ -54,23 +65,65 @@
         </nav>
     </div>
 
-    
-    
     <!--Hero-->
     <div class="container px-4 py-5 my-5 text-center text-light hero">
-        <h1 class="display-5 fw-bold">The Gym<svg lass="d-block mx-auto mb-4" width="72" height="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFFFFF" d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H362.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"/></svg></h1>
+      <?php
+      if (isset($_SESSION["username"]))
+      {
+        echo '<h1 class="display-5 fw-bold">Hey, ' .$_SESSION["username"] . '<svg lass="d-block mx-auto mb-4" width="72" height="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFFFFF" d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H362.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"/></svg></h1>';
+      }
+      else
+      {
+        echo '<h1 class="display-5 fw-bold">The Gym<svg lass="d-block mx-auto mb-4" width="72" height="57" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#FFFFFF" d="M320 48a48 48 0 1 0 -96 0 48 48 0 1 0 96 0zM125.7 175.5c9.9-9.9 23.4-15.5 37.5-15.5c1.9 0 3.8 .1 5.6 .3L137.6 254c-9.3 28 1.7 58.8 26.8 74.5l86.2 53.9-25.4 88.8c-4.9 17 5 34.7 22 39.6s34.7-5 39.6-22l28.7-100.4c5.9-20.6-2.6-42.6-20.7-53.9L238 299l30.9-82.4 5.1 12.3C289 264.7 323.9 288 362.7 288H384c17.7 0 32-14.3 32-32s-14.3-32-32-32H362.7c-12.9 0-24.6-7.8-29.5-19.7l-6.3-15c-14.6-35.1-44.1-61.9-80.5-73.1l-48.7-15c-11.1-3.4-22.7-5.2-34.4-5.2c-31 0-60.8 12.3-82.7 34.3L57.4 153.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l23.1-23.1zM91.2 352H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h69.6c19 0 36.2-11.2 43.9-28.5L157 361.6l-9.5-6c-17.5-10.9-30.5-26.8-37.9-44.9L91.2 352z"/></svg></h1>';
+      }
+      ?>
         <h1 class="display-6 fw-bold">Little to apply, a lot to gain.</h1>
         <div class="col-lg-6 mx-auto">
-        <p class="lead mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas minus voluptates, non est aperiam vitae repudiandae, voluptatem eveniet molestias ratione repellendus modi atque, sapiente dolor consectetur explicabo nobis dignissimos dolore.</p>
-            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <button type="button" class="btn btn-info text-light btn-lg px-4 gap-3">Join Today</button>
-            </div>  
-        </div>
+        <p class="lead mb-4">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptas minus voluptates, non est aperiam vitae repudiandae, voluptatem eveniet molestias ratione repellendus modi atque, sapiente dolor consectetur explicabo nobis dignissimos dolore.</p> 
+        <?php
+      if (isset($_SESSION["username"]))
+      {
+        echo '<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-info text-light btn-lg px-4 gap-3">Book a session</button>
+        </div>  ';
+      }
+      else
+      {
+        echo '<div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <button type="button" class="btn btn-info text-light btn-lg px-4 gap-3">Join Today</button>
+      </div>  ';
+      }
+    ?>
     </div>
-
-    <!--Login-->
+  
+    </div>
+    <!--Login / Past sessions-->
     <div class="container-fluid bg-info col-xl-10 col-xxl-8 px-5 py-5">
-      <div class="row align-items-center g-lg-5 py-5">
+     <?php if (isset($_SESSION["username"]))
+      {
+        echo '<div class="row align-items-center g-lg-5 py-5">
+        <div class="col-lg-7 text-center text-lg-start">
+          <h1 class="display-4 fw-bold lh-1 mb-3">Your recent session.</h1>
+          <p class="col-lg-10 fs-4">[Timestamp here]</p>
+          <p class="col-lg-10 fs-4">Catch up with your progress.</p>
+        </div>
+        <div class="col-md-10 mx-auto col-lg-5 text-center">
+            <div class="card mx-auto style="width: 18rem;">
+              <div class="card-header">
+                Exercises
+              </div>
+              <ul class="list-group list-group-flush">
+                <li class="list-group-item">1. Treadmill (30 mins)</li>
+                <li class="list-group-item">2. Bicep Curls (3 Sets x 10kg)</li>
+                <li class="list-group-item">3. Tricep Dips (3 Sets x 10kg)</li>
+              </ul>
+            </div>
+        </div>
+      </div>';
+      }
+      else
+      {
+        echo '<div class="row align-items-center g-lg-5 py-5">
         <div class="col-lg-7 text-center text-lg-start">
           <h1 class="display-4 fw-bold lh-1 mb-3">Get back to it.</h1>
           <p class="col-lg-10 fs-4">Catch where you left off.</p>
@@ -91,9 +144,10 @@
             <small class="text-muted">Or click <a href="#">here</a> to sign uo.</small>
             </form>
         </div>
-      </div>
+      </div>';
+      }
+    ?>
     </div>
-
 
     <!--Explore Jumbo-->
     <div class="container my-5 fade-in-up-on-scroll"></div>
@@ -171,12 +225,21 @@
                   <div class="card-body">
                     <h1 class="card-title pricing-card-title">£19.99<small class="text-body-secondary fw-light">/mo</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li>10 users included</li>
-                      <li>2 GB of storage</li>
-                      <li>Email support</li>
-                      <li>Help center access</li>
+                      <li>24/7 access</li>
+                      <li>Locker (with token purchase)</li>
+                      <li>£9.99 induction fee</li>
+                      <li>Free classes for first 30 days</li>
                     </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-outline-primary">Choose Plan</button>
+                    <?php
+                      if (isset($_SESSION["username"]))
+                      {
+                        echo '<button type="button" class="w-100 btn btn-lg btn-outline-primary">Choose Plan</button>';
+                      }
+                      else
+                      {
+                        echo '<button type="button" class="w-100 btn btn-lg btn-outline-primary">Sign in to see pricing details</button>';
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
@@ -188,12 +251,21 @@
                   <div class="card-body">
                     <h1 class="card-title pricing-card-title">£34.99<small class="text-body-secondary fw-light">/mo</small></h1>
                     <ul class="list-unstyled mt-3 mb-4">
-                      <li>30 users included</li>
-                      <li>15 GB of storage</li>
-                      <li>Phone and email support</li>
-                      <li>Help center access</li>
+                      <li>24/7 access</li>
+                      <li>Free locker token</li>
+                      <li>Free induction</li>
+                      <li>Free classes throughout</li>
                     </ul>
-                    <button type="button" class="w-100 btn btn-lg btn-primary">Choose Plan</button>
+                    <?php
+                      if (isset($_SESSION["username"]))
+                      {
+                        echo '<button type="button" class="w-100 btn btn-lg btn-primary">Choose Plan</button>';
+                      }
+                      else
+                      {
+                        echo '<button type="button" class="w-100 btn btn-lg btn-primary">Sign in to see pricing details</button>';
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
