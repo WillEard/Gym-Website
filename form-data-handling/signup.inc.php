@@ -12,15 +12,11 @@
 
         $_SESSION['username-SU'] = $_POST['username-SU'];
 
-        include "../classes/signup-error-handler.php";
-        $errorHandler = new ErrorHandler($email, $uname, $password, $confirmPass);
-        $errorHandler->CallErrorHandlers();
-
         // INSTANTIATE SignUpController class
         include "../classes/db-connect.php";
         include "../classes/signup-class.php";
         include "../classes/signup-controller.php";
-        $signup = new SignUpController($email, $uname, $password, $confirmPass);
+        $signup = new SignUpController($uname, $email, $password, $confirmPass);
 
         $signup->SignUpUser();
 

@@ -4,11 +4,11 @@
     class SignUp extends DBClass
     {
         // CHECK user if already exists
-        protected function CheckUser($userID, $email)
+        protected function CheckUser($uname, $email)
         {
             $stmt = $this->Connect()->prepare('SELECT username FROM users WHERE username = ? OR Email = ?;');
             
-            if (!$stmt->execute(array($userID, $email)))
+            if (!$stmt->execute(array($uname, $email)))
             {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");
@@ -29,13 +29,13 @@
         }
 
         // INSERT user details into users table
-        protected function SetUser($userID, $pass, $email)
+        protected function SetUser($uname, $email, $pass)
         {
             $stmt = $this->Connect()->prepare('INSERT INTO users (username, email, pass) VALUES (?, ?, ?);');
 
             $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
-            if (!$stmt->execute(array($userID, $hashedPass, $email)))
+            if (!$stmt->execute(array($uname, $email, $hashedPass)))
             {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");

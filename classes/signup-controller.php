@@ -28,35 +28,35 @@
         public function SignUpUser()
         {
             // IF fields are empty
-            if ($errorHandler.EmptyInput() == false)
+            if ($this->EmptyInput() == false)
             {
                 header("location: ../sign-up-in.php?error=emptyinput(s)");
                 exit();
             }
 
             // IF username is invalid
-            if ($errorHandler.InvalidUid() == false)
+            if ($this->InvalidUid() == false)
             {
                 header("location: ../sign-up-in.php?error=invalidusername");
                 exit();
             }
 
             // IF email is invalid
-            if ($errorHandler.InvalidEmail() == false)
+            if ($this->InvalidEmail() == false)
             {
                 header("location: ../sign-up-in.php?error=invalidemail");
                 exit();
             }
 
             // IF password && confirmPassword do not match
-            if ($errorHandler.PasswordMatch() == false)
+            if ($this->PasswordMatch() == false)
             {
                 header("location: ../sign-up-in.php?error=incorrectpass");
                 exit();
             }
 
             // IF user entered already exists
-            if ($errorHandler.CheckUserExists() == false)
+            if ($this->CheckUserExists() == false)
             {
                 header("location: ../sign-up-in.php?error=usernameoremailtaken");
                 exit();
@@ -66,8 +66,68 @@
             $this->SetUser($this->uname, $this->email, $this->password);
         }
 
+        function EmptyInput()
+        {
+            if (empty($this->uname) || empty($this->email) || empty($this->password) || empty($this->confirmPassword))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        function InvalidUid()
+        {
+            if (!preg_match("/^[a-zA-Z0-9]*$/", $this->uname))  
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        function InvalidEmail()
+        {
+            if (!filter_var($this->email, FILTER_VALIDATE_EMAIL))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        function PasswordMatch()
+        {
+            if  ($this->password !== $this->confirmPassword)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
+        function CheckUserExists()
+        {
+            if (!$this->CheckUser($this->uname, $this->email))
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+
         // GET User ID
-        private function FetchUserID($uname)
+        public function FetchUserID($uname)
         {
             $userId = $this->GetUserID($uname);
 

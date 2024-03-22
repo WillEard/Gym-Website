@@ -52,7 +52,7 @@
             {
                 if ($_GET["error"] == "emptyinput(s)")
                 {
-                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Empty Fields</div>";
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Empty Fields!</div>";
                 }
 
                 if ($_GET["error"] == "invalidusername")
@@ -67,7 +67,7 @@
 
                 if ($_GET["error"] == "incorrectpass")
                 {
-                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Passwords do not match!s</div>";
+                    echo "<div class='mx-auto alert alert-danger' role='alert'>Error: Passwords do not match!</div>";
                 }
 
                 if ($_GET["error"] == "usernameoremailtaken")

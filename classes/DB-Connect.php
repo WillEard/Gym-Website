@@ -9,8 +9,7 @@
                 $username = "root";
                 $password = "";
 
-                $databaseManager = new PDO('mysql:host-localhost;dbname=GymDatabase',$username,$password);
-
+                $databaseManager = new PDO('mysql:host=localhost;dbname=GymDatabase',$username,$password);
                 return $databaseManager;
                 
             } 
