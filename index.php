@@ -129,14 +129,14 @@
           <p class="col-lg-10 fs-4">Catch where you left off.</p>
         </div>
         <div class="col-md-10 mx-auto col-lg-5">
-          <form class="p-4 p-md-5 border rounded-3 bg-light">
+          <form class="p-4 p-md-5 border rounded-3 bg-light" action="form-data-handling/signin.inc.php" method="POST" novalidate> 
             <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-              <label for="floatingInput">Email address</label>
+              <input name="username-SI" type="text" class="form-control" id="floatingUsername-SI" placeholder="name@example.com">
+              <label for="floatingUsername-SI">Username</label>
             </div>
             <div class="form-floating mb-3">
-              <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-              <label for="floatingPassword">Password</label>
+              <input name="password-SI" type="password" class="form-control" id="floatingPassword-SI" placeholder="Password">
+              <label for="floatingPassword-SI">Password</label>
             </div>
             
             <button class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
