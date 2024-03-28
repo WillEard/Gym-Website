@@ -1,13 +1,6 @@
-*{
-    --background: #f9f9f9 !important;
-}
-
 body{
-    background-color: var(--background) !important;
-    -ms-overflow-style: none;  /* Internet Explorer 10+ */
-    scrollbar-width: none;  /* Firefox */
-    display: none;  /* Safari and Chrome */
-
+    --background: #F5F5F5;
+    background-color: #F5F5F5 !important;
 }
 
 .bg-img{
