@@ -29,13 +29,13 @@
         }
 
         // INSERT user details into users table
-        protected function SetUser($uname, $email, $pass)
+        protected function SetUser($fullName, $uname, $email, $pass)
         {
-            $stmt = $this->Connect()->prepare('INSERT INTO users (username, email, pass) VALUES (?, ?, ?);');
+            $stmt = $this->Connect()->prepare('INSERT INTO users (fullname, username, email, pass) VALUES (?, ?, ?, ?);');
 
             $hashedPass = password_hash($pass, PASSWORD_DEFAULT);
 
-            if (!$stmt->execute(array($uname, $email, $hashedPass)))
+            if (!$stmt->execute(array($fullName, $uname, $email, $hashedPass)))
             {
                 $stmt = null;
                 header("location: ../index.php?error=stmtfailed");

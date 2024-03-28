@@ -132,6 +132,10 @@
             <div class="col-md-10 mx-auto col-lg-5">
                 <form class="p-4 p-md-5 border rounded-3 bg-light" action="form-data-handling/signup.inc.php" method="POST" novalidate>
                     <div class="form-floating mb-3">
+                        <input name="fullName-SU" type="text" class="form-control" id="floatingName-SU" placeholder="John Doe">
+                        <label for="floatingName-SU">Full Name</label>
+                    </div>
+                    <div class="form-floating mb-3">
                         <input name="email-SU" type="email" class="form-control" id="floatingEmail-SU" placeholder="name@example.com">
                         <label for="floatingEmail-SU">Email</label>
                     </div>

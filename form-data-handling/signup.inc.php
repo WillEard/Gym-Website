@@ -5,6 +5,7 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
+        $fullName = htmlspecialchars($_POST["fullName-SU"], ENT_QUOTES, 'UTF-8');
         $email = htmlspecialchars($_POST["email-SU"], ENT_QUOTES, 'UTF-8');
         $uname = htmlspecialchars($_POST["username-SU"], ENT_QUOTES, 'UTF-8');
         $password = htmlspecialchars($_POST["password-SU"], ENT_QUOTES, 'UTF-8');
@@ -16,7 +17,7 @@
         include "../classes/db-connect.php";
         include "../classes/signup-class.php";
         include "../classes/signup-controller.php";
-        $signup = new SignUpController($uname, $email, $password, $confirmPass);
+        $signup = new SignUpController($fullName, $uname, $email, $password, $confirmPass);
 
         $signup->SignUpUser();
 

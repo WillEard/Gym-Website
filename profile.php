@@ -81,6 +81,7 @@
                         <hr/>
                         <div class="container">
                             <button class="btn btn-md btn-warning col-md-8 my-1">Change Password</button> 
+                            <button class="btn btn-md btn-warning col-md-8 my-1">Update Phone Number</button> 
                             <button class="btn btn-md btn-danger col-md-8 my-1">Cancel Membership</button> 
                             <button class="btn btn-md btn-danger col-md-8 my-1">Terminate Account</button> 
                         </div>    
@@ -92,32 +93,32 @@
                     <form>
                         <div class="row">
                             <div class="form-group col-md-5">
-                                <label>First Name:</label>
+                                <label>Full Name:</label>
                                 <input type='text' class='form-control' placeholder='First Name' readonly>
                            </div>
-                            <div class="form-group col-md-5">
-                                <label for="">Surname:</label>
-                                <input type='text' class='form-control' placeholder='Surname' readonly>
+                           <div class="form-group col-md-5">
+                                <label for="">Username:</label>
+                                <input type='text' class='form-control' placeholder='<?php echo $_SESSION['username']?>' readonly>
                             </div>
                         </div>
                         <div class="row my-3">
                             <div class="form-group col-md-5">
-                                <label for="">Username:</label>
-                                <input type='text' class='form-control' placeholder='Username' readonly>
-                            </div>
-                            <div class="form-group col-md-5">
                                 <label>Email Address:</label>
                                 <input type='email' class='form-control' placeholder='Email Address' readonly>
                             </div>
-                        </div>
-                        <div class="row my-3 py-1">
                             <div class="form-group col-md-5">
                                 <label for="">Phone Number:</label>
                                 <input type='text' class='form-control' placeholder='+XX XXXX XXX XXX' readonly>
                             </div>
+                        </div>
+                        <div class="row my-3 py-1">
                             <div class="form-group col-md-5">
                                 <label>Your Plan:</label>
                                 <input type='text' class='form-control' placeholder='Lite/Premium' readonly>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label>Password:</label>
+                                <input type='text' class='form-control' placeholder='**********' readonly>
                             </div>
                         </div>
                         

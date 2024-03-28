@@ -4,6 +4,7 @@
     class SignUpController extends SignUp
     {
         // VARIABLES for user data
+        private $fullName;
         private $uname;
         private $password;
         private $confirmPassword;
@@ -13,8 +14,9 @@
         private $errorHandler;
 
         // CONSTRUCTOR
-        public function __construct($uname, $email, $password, $confirmPassword)
+        public function __construct($fullName, $uname, $email, $password, $confirmPassword)
         {
+            $this->fullName = $fullName;
             $this->uname = $uname;
             $this->email = $email;
             $this->password = $password;
@@ -60,12 +62,12 @@
             }
 
             // CALL SetUser
-            $this->SetUser($this->uname, $this->email, $this->password);
+            $this->SetUser($this->fullName, $this->uname, $this->email, $this->password);
         }
 
         function EmptyInput()
         {
-            if (empty($this->uname) || empty($this->email) || empty($this->password) || empty($this->confirmPassword))
+            if (empty($this->fullName) || empty($this->uname) || empty($this->email) || empty($this->password) || empty($this->confirmPassword))
             {
                 return false;
             }
