@@ -1,5 +1,10 @@
 <?php
     session_start();
+
+    // If not logged in
+    if(!isset($_SESSION["username"])){ 
+        header("Location: index.php");
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -68,22 +73,21 @@
                     <div class="text-center">
                         <h2>Profile</h2>
                         <hr/>
-                        <img class="img-fluid" src="https://via.placeholder.com/250" alt="Profile Image"><br><br>
+                        <img class="img-fluid" src="https://via.placeholder.com/165" alt="Profile Image"><br><br>
 
-                        <div class="file btn btn-md btn-primary col-md-6">Change Profile Picture
-							<input style="opacity: 0; position: absolute;" type="file" name="file"/> 
+                        <div class="file btn btn-md btn-primary col-md-6 disabled">Change Profile Picture
+			                <input style="opacity: 0; position: absolute;" type="file" name="file"/> 
 						</div> 
-
                         <hr/>
-
-                        <a class="btn btn-success btn-lg" href="Sell.php" role="button">List Vehicle For Sale</a>
-
-                        <hr/>
-                        <hr/>
+                        <div class="container">
+                            <button class="btn btn-md btn-warning col-md-8 my-1">Change Password</button> 
+                            <button class="btn btn-md btn-danger col-md-8 my-1">Cancel Membership</button> 
+                            <button class="btn btn-md btn-danger col-md-8 my-1">Terminate Account</button> 
+                        </div>    
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h2 class="text-center">Account Information</h2>
+                    <h2 class="mx-auto">Account Information</h2>
                     <hr/>
                     <form>
                         <div class="row">
@@ -106,11 +110,19 @@
                                 <input type='email' class='form-control' placeholder='Email Address' readonly>
                             </div>
                         </div>
-                        <div class="row">
+                        <div class="row my-3 py-1">
                             <div class="form-group col-md-5">
-                                <label>Change Password:</label>
-                                <button type="button" class="btn btn-md btn-warning col-md-12" data-toggle="modal" data-target="#PasswordModal">Change Password</button>
-                                <small id="passwordsmalltext" class="form-text text-muted">Change the account password</small>
+                                <label for="">Phone Number:</label>
+                                <input type='text' class='form-control' placeholder='+XX XXXX XXX XXX' readonly>
+                            </div>
+                            <div class="form-group col-md-5">
+                                <label>Your Plan:</label>
+                                <input type='text' class='form-control' placeholder='Lite/Premium' readonly>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-md-5 text-center">
                                 <div class="modal fade" id="PasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                     <div class="modal-dialog" role="document">
                                         <div class="modal-content">
@@ -130,36 +142,35 @@
                                         </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div>                      
+                            </div>
+                            <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Terminate Account</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h5 class="text-center mx-auto">Are you sure you want to delete your account?</h5>
+                                        <h6 class="text-center text-danger">All data will be permanently lost.</h6>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button onclick="window.location.href='php-includes/DeleteProcessLoading.php';" type="button" class="btn btn-danger">Delete Account</button>
+                                    </div>
+                                    </div>
+                                </div> 
+                            </div>  
                                 <hr/>
                             </div>
-                        
-                            <div class="form-group col-md-5">
-                                <label for="">Delete Account:</label>
-                                <button type="button" class="btn btn-md btn-danger col-md-12" data-toggle="modal" data-target="#DeleteModal">Terminate Account</button>
-                                <small id="deleteaccountsmalltext" class="form-text text-muted">Permanently delete your account and all data</small>
-
-                                <div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                        <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLabel">Terminate Account</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <h5 class="text-center mx-auto">Are you sure you want to delete your account?</h5>
-                                            <h6 class="text-center text-danger">All data will be permanently lost.</h6>
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button onclick="window.location.href='php-includes/DeleteProcessLoading.php';" type="button" class="btn btn-danger">Delete Account</button>
-                                        </div>
-                                        </div>
-                                    </div>
-                                </div>  
-                                <hr/>
+                            <div class="row">
+                                <h2>Previous Workouts</h2>
+                                <div class="alert alert-warning col-md-6 text-center" role="alert">
+                                    You currently have no previous work outs! Book one <a href="#">here.</a>
+                                </div>
                             </div>
                         </div>
                     </form>                    

@@ -25,7 +25,7 @@
   </head>
 <body>
     
-    <img class="bg-img" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
+    <img class="bg-img" width="500" height="500" src="https://images.unsplash.com/photo-1571902943202-507ec2618e8f?q=100&w=2875&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="BG image">
 
     <!--Navbar-->
     <div class="container">
@@ -164,7 +164,7 @@
       <div class="container col-xxl-8 px-4 py-5">
         <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
           <div class="col-10 col-sm-8 col-lg-6 mx-auto">
-            <img src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?q=80&w=2746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+            <img width="500" height="500" src="https://images.unsplash.com/photo-1580261450046-d0a30080dc9b?q=80&w=2746&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block mx-lg-auto img-fluid rounded" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
           </div>
           <div class="col-lg-6">
             <h1 class="display-5 fw-bold lh-1 mb-3">Achieve Greatness.</h1>
@@ -184,7 +184,7 @@
           <div class="row justify-content-center row-cols-sm-4 mx-auto text-center justify-content-center g-4 py-5 mx-auto">
             <div class="col">
               <div class="card" style="width: 18rem;">
-                <img src="https://images.unsplash.com/photo-1561214078-f3247647fc5e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                <img width="200" height="200" src="https://images.unsplash.com/photo-1561214078-f3247647fc5e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">London</h5>
                   <p class="card-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus vel laboriosam ad itaque, asperiores adipisci aliquid voluptate, maxime consectetur culpa, amet esse? Sapiente non optio similique nam fugiat pariatur blanditiis.</p>
@@ -194,7 +194,7 @@
             </div>
             <div class="col">
               <div class="card" style="width: 18rem;">
-                <img src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                <img width="200" height="200" src="https://images.unsplash.com/photo-1540497077202-7c8a3999166f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Birmingham</h5>
                   <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet aliquid maiores dolorum molestias delectus deleniti possimus illo neque doloribus porro, in quia. Officia temporibus error vero asperiores quidem dignissimos deserunt.</p>
@@ -204,7 +204,7 @@
             </div>
             <div class="col">
               <div class="card" style="width: 18rem;">
-                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
+                <img width="200" height="200" src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">Manchester</h5>
                   <p class="card-text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptates amet quibusdam magnam maxime voluptate ad culpa, voluptas nesciunt quidem atque. Autem quibusdam laborum voluptate sapiente similique, assumenda ea blanditiis cum.</p>
